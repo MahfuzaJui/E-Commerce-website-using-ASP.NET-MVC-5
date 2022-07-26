@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Edit User Details</h2>
+
+<form action="/Admin/EditUser" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" class="form-control"/>
+    <input type="text" name="Name" value="@Model.Name" class="form-control" placeholder="Edit Name"/>
+    <input type="text" name="Emain" value="@Model.Email" class="form-control" placeholder="Edit Email"/>
+    <input type="submit" value="Save Changes"/>
+</form>
+

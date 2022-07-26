@@ -1,0 +1,27 @@
+﻿@model List<MidProject.Models.Database.User>
+@{
+    ViewBag.Title = "Buyers";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Buyers</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>

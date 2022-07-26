@@ -1,0 +1,29 @@
+﻿@model List<MidProject.Models.Database.Product>
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>Products</h2>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.P_Id</td>
+                <td>@p.P_Name</td>
+                <td>@p.Price</td>
+                <td>@p.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
